@@ -1,0 +1,242 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %}
+{% block home %}
+<section>
+  <div class="hero">
+    <div class="hero__content container">
+      <div class="content">
+        <h1>Header</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio porro
+          obcaecati esse id in qui mollitia accusamus nulla quos maxime nisi hic
+          eos magni, adipisci sed tempora placeat, non harum!
+        </p>
+      </div>
+      <div class="hero__searchbar">
+        <input type="text" placeholder="Search Here" />
+        <button>
+          <svg class="icon icon--white icon-her--search">
+            <use xlink:href="{% static 'images/sprite.svg' %}#search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="introduction--section">
+  <div class="introduction">
+    <div class="container">
+      <div class="introduction--heading">
+        <h1>Introduction</h1>
+        <p style="padding-left: 10px; font-size: 1rem">Hello to the world.</p>
+      </div>
+      <div class="introduction--image">
+        <p>
+          <img src="{% static 'images/intro-image.jpeg' %}" alt="" />
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          asperiores molestiae veritatis eum aut porro minus, nostrum magni ab
+          rem maiores. Natus quam aut, porro ipsa velit distinctio veritatis!
+          Rerum, earum similique! Veritatis sint autem saepe ex minus, dicta
+          corporis. Distinctio, nostrum ipsam! Veniam nostrum odio nobis ab
+          distinctio obcaecati deleniti perferendis. Natus blanditiis,
+          exercitationem commodi iure totam, recusandae voluptates doloremque
+          est illum ipsum perferendis eaque non. Voluptas perspiciatis doloribus
+          similique? Quasi tempora maxime saepe quis ducimus nesciunt, libero
+          earum esse quae cupiditate at odio voluptatibus, unde blanditiis.
+          Labore, sed! Fuga aut dignissimos molestiae velit sint illo nostrum
+          officiis assumenda. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Voluptas iste possimus quasi porro dolorem,
+          voluptate itaque corporis, debitis, quae voluptates veniam commodi
+          esse. Debitis, labore nulla dolor assumenda architecto amet
+          repudiandae fugiat accusantium in porro deserunt eos numquam voluptate
+          et qui impedit. Totam dignissimos cupiditate incidunt, provident
+          optio, corrupti delectus facilis atque doloremque sunt soluta animi
+          amet ullam quae voluptatem. Ea sequi modi distinctio amet dolor eum
+          corrupti illum, eius veritatis inventore iste saepe autem eveniet!
+          Perferendis, laborum. Iure eveniet consequatur, earum veritatis
+          perferendis fugit! In quidem omnis, tempore consequuntur vitae quis
+          perspiciatis quam molestias assumenda voluptate hic, consectetur
+          nulla?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonial testimonial-slider">
+  <div class="container">
+    <h2>Testimonials</h2>
+    <div id="coverflow">
+      <ul class="flip-items">
+        <li>
+          <div class="testimonial--content">
+            <div class="qout">
+              <svg class="icon qout-icon" style="right: 0">
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-left-solid"
+                ></use>
+              </svg>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                error sapiente autem voluptas quia omnis incidunt eos dicta quo
+                illo consequuntur dolore necessitatibus, rem, possimus veritatis
+                quaerat molestiae beatae obcaecati?
+              </p>
+              <svg
+                class="icon qout-icon"
+                style="align-self: flex-end; margin-top: 0; margin-bottom: 50px"
+              >
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-right-solid"
+                ></use>
+              </svg>
+            </div>
+            <div class="qout--by">
+              <img src="{% static 'images/intro-image.jpeg' %}" alt="" />
+              <h1>Jhon Doe</h1>
+              <p>Good Customer</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial--content">
+            <div class="qout">
+              <svg class="icon qout-icon" style="right: 0">
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-left-solid"
+                ></use>
+              </svg>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                error sapiente autem voluptas quia omnis incidunt eos dicta quo
+                illo consequuntur dolore necessitatibus, rem, possimus veritatis
+                quaerat molestiae beatae obcaecati?
+              </p>
+              <svg
+                class="icon qout-icon"
+                style="align-self: flex-end; margin-top: 0; margin-bottom: 50px"
+              >
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-right-solid"
+                ></use>
+              </svg>
+            </div>
+            <div class="qout--by">
+              <img src="{% static 'images/intro-image.jpeg' %}" alt="" />
+              <h1>Jhon Doe</h1>
+              <p>Good Customer</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial--content">
+            <div class="qout">
+              <svg class="icon qout-icon" style="right: 0">
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-left-solid"
+                ></use>
+              </svg>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                error sapiente autem voluptas quia omnis incidunt eos dicta quo
+                illo consequuntur dolore necessitatibus, rem, possimus veritatis
+                quaerat molestiae beatae obcaecati?
+              </p>
+              <svg
+                class="icon qout-icon"
+                style="align-self: flex-end; margin-top: 0; margin-bottom: 50px"
+              >
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-right-solid"
+                ></use>
+              </svg>
+            </div>
+            <div class="qout--by">
+              <img src="{% static 'images/intro-image.jpeg' %}" alt="" />
+              <h1>Jhon Doe</h1>
+              <p>Good Customer</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial--content">
+            <div class="qout">
+              <svg class="icon qout-icon" style="right: 0">
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-left-solid"
+                ></use>
+              </svg>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                error sapiente autem voluptas quia omnis incidunt eos dicta quo
+                illo consequuntur dolore necessitatibus, rem, possimus veritatis
+                quaerat molestiae beatae obcaecati?
+              </p>
+              <svg
+                class="icon qout-icon"
+                style="align-self: flex-end; margin-top: 0; margin-bottom: 50px"
+              >
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-right-solid"
+                ></use>
+              </svg>
+            </div>
+            <div class="qout--by">
+              <img src="i{% static 'images/intro-image.jpeg' %}" alt="" />
+              <h1>Jhon Doe</h1>
+              <p>Good Customer</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="testimonial--content">
+            <div class="qout">
+              <svg class="icon qout-icon" style="right: 0">
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-left-solid"
+                ></use>
+              </svg>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                error sapiente autem voluptas quia omnis incidunt eos dicta quo
+                illo consequuntur dolore necessitatibus, rem, possimus veritatis
+                quaerat molestiae beatae obcaecati?
+              </p>
+              <svg
+                class="icon qout-icon"
+                style="align-self: flex-end; margin-top: 0; margin-bottom: 50px"
+              >
+                <use
+                  xlink:href="{% static 'images/sprite-qout.svg' %}#quote-right-solid"
+                ></use>
+              </svg>
+            </div>
+            <div class="qout--by">
+              <img src="{% static 'images/intro-image.jpeg' %}" alt="" />
+              <h1>Jhon Doe</h1>
+              <p>Good Customer</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      var coverflow = $("#coverflow").flipster({
+        delay: 0,
+        loop: true,
+        autoplay: 4000,
+        pauseOnHover: false,
+        style: "coverflow",
+        click: false,
+        keyboard: false,
+        scrollwheel: false,
+        touch: false,
+        nav: false,
+        buttons: true,
+        buttonPrev: "Previous",
+        buttonNext: "Next",
+        onItemSwitch: false,
+      });
+    </script>
+  </div>
+</section>
+{% endblock %}

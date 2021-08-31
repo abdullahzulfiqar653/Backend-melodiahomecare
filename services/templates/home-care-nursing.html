@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %}Skilled Nurse{% endblock %} 
+{% block home %} 
+{% for service in service %}
+<section class="introduction--section">
+  <div class="introduction">
+    <div class="container">
+      <div class="introduction--heading">
+        <h1>{{ service.service_name }}</h1>
+        <p style="padding-left: 10px; font-size: 1rem">Hello to the world.</p>
+      </div>
+      <div class="introduction--image">
+        <div><p>{{ service.blog|safe }}</p></div>
+        <img src="{{ service.service_image.url }}" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %} {% endblock %}

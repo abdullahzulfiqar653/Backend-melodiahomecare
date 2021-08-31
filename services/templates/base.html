@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MelodiaHomeCare - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- jQuery -->
+    <link rel="stylesheet" href="{% static 'js/jquery.flipster.min.css' %}" />
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flipster.min.js' %}"></script>
+  </head>
+  <body onload="collaps()">
+    <header class="nav__container">
+      <nav class="nav collapsible container" id="navi">
+        <h1 class="nav__heading">
+          <a href="{% url 'home' %}"
+            ><i class="fa fa-stethoscope"></i>
+            <span style="font-weight: bolder">MelodiaHomeCare</span></a
+          >
+        </h1>
+        <svg class="icon nav-toggler" onclick="expand()">
+          <use xlink:href="{% static 'images/sprite.svg' %}#menu"></use>
+        </svg>
+        <svg class="nav-cross icon-small" onclick="collaps()">
+          <use xlink:href="{% static 'images/sprite-x.svg' %}#letter-x"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="nav__item collapsible--drop">
+            <div class="dropdown">
+              <div class="dropbtn">
+                <a href="#">About <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown-content">
+                <a href="#">Services & Areas</a>
+                <a href="#">Testimonials</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item collapsible--drop">
+            <div class="dropdown">
+              <div class="dropbtn">
+                <a href="#">Services <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown-content">
+                <a href="{% url 'nursing_service' %}">Skilled Nurse (SN)</a>
+                <a href="{% url 'home_care' %}">Home Care Nursing (HCN)</a>
+                <a href="home-health-aide.html">Home Health Aide</a>
+                <a href="personal-care-assistance.html"
+                  >Personal Care Assistance (PCA)</a
+                >
+                <a href="homemaking-services.html">Homemaking Services</a>
+                <a href="therapy.html">Therapy</a>
+                <a href="IV-therap.html">IV Therapy</a>
+                <a href="interpretive-services.html">Interpretive Services</a>
+                <a href="independent-living-skills.html"
+                  >Independent Living Skills (ILS)</a
+                >
+                <a href="companion.html">Companion</a>
+                <a href="respite.html">Respite</a>
+                <a href="social-services.html">Social Services</a>
+                <a href="hospice.html">Hospice</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a href="#">Payment</a></li>
+          <li class="nav__item collapsible--drop">
+            <div class="dropdown">
+              <div class="dropbtn">
+                <a href="#">Career <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown-content">
+                <a href="#">Employee Benefits</a>
+                <a href="#">Opening</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+          <li class="nav__item collapsible--drop">
+            <div class="dropdown">
+              <div class="dropbtn">
+                <a href="#">Hospice <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown-content">
+                <a href="#">What is Hospice?</a>
+                <a href="#">FAQ</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav__item"><a href="#">Apply Now</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block home %} {% endblock %}
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsable footer__section">
+          <header class="collapsable__header">
+            <h2 class="collapsable__heading footer__heading">Basics</h2>
+            <svg class="icon icon--white collapsable__chevron">
+              <use xlink:href="{% static 'images/sprite.svg' %}#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsable__content">
+            <ul class="list footer__list">
+              <li><a href="">Home</a></li>
+              <li><a href="">Payment</a></li>
+              <li><a href="">About</a></li>
+              <li class="subheading"><a href="">About</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsable footer__section">
+          <header class="collapsable__header">
+            <h2 class="collapsable__heading footer__heading">
+              How Do We Work?
+            </h2>
+            <svg class="icon icon--white collapsable__chevron">
+              <use xlink:href="{% static 'images/sprite.svg' %}#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsable__content">
+            <ul class="list footer__list">
+              <li><a href="">Item 1</a></li>
+              <li><a href="">Item 2</a></li>
+              <li><a href="">Item 3</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__brand">
+          <h1 class="nav__heading footer__brand-heading">
+            <a href="{% url 'home' %}"
+              ><i class="fa fa-stethoscope"></i> <span>MelodiaHomeCare</span></a
+            >
+          </h1>
+          <a href=""><i class="fa fa-facebook"></i></a>
+          <a href=""><i class="fa fa-instagram"></i></a>
+          <a href=""><i class="fa fa-youtube"></i></a>
+        </section>
+      </div>
+      <hr />
+      <div class="copy_right">
+        <p class="footer__copyright">Copyright © 2021 MelodiaHomeCare</p>
+        <p class="footer__copyright">support@melodiahomecare.com</p>
+        <p class="footer__copyright made_by">
+          Design and Developed by <span>RYKSOFT</span>
+        </p>
+      </div>
+    </footer>
+    <script src="{% static 'js/func.js' %}"></script>
+  </body>
+</html>
