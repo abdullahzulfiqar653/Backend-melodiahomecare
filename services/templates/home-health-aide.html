@@ -7,7 +7,11 @@
     <div class="container">
       <div class="introduction--heading">
         <h1>{{ service.service_name }}</h1>
-        <p style="padding-left: 10px; font-size: 1rem">Hello to the world.</p>
+        {% if sub_heading %}
+        <p style="padding-left: 10px; font-size: 1rem">
+          {{ service.sub_heading }}
+        </p>
+        {% endif %}
       </div>
       <div class="introduction--image">
         <div><p>{{ service.blog|safe }}</p></div>

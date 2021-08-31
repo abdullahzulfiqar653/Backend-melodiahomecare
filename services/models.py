@@ -7,6 +7,8 @@ from ckeditor.fields import RichTextField
 class Nursing_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/skilled-nursing', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -22,6 +24,8 @@ class Nursing_Service(models.Model):
 class Care_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/home-care-nursing', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -37,6 +41,8 @@ class Care_Service(models.Model):
 class Aid_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/home-health-aide', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -52,6 +58,8 @@ class Aid_Service(models.Model):
 class Assistant_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/perosonal-care', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -67,6 +75,8 @@ class Assistant_Service(models.Model):
 class Homemaking_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/homemaking-service', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -82,6 +92,8 @@ class Homemaking_Service(models.Model):
 class Therapy_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/therapy', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -97,6 +109,8 @@ class Therapy_Service(models.Model):
 class IV_Therapy_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/iv-therapy', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -112,6 +126,8 @@ class IV_Therapy_Service(models.Model):
 class Interpretive_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/interpretive', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -127,6 +143,8 @@ class Interpretive_Service(models.Model):
 class Living_Skills_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/independent-living', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -142,6 +160,8 @@ class Living_Skills_Service(models.Model):
 class Companion_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/companion', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -157,6 +177,8 @@ class Companion_Service(models.Model):
 class Respite_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/respite', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -172,6 +194,8 @@ class Respite_Service(models.Model):
 class Social_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/social-service', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -187,6 +211,8 @@ class Social_Service(models.Model):
 class Hospice_Service(models.Model):
     service_name = models.CharField(
         max_length=250, null=False, blank=False, verbose_name="Heading")
+    sub_heading = models.CharField(
+        max_length=250, null=True, blank=True, verbose_name="Sub-Heading")
     service_image = models.ImageField(
         upload_to='service_uploads/hospice', blank=True, null=True, verbose_name="Image")
     blog = RichTextField(verbose_name="Details of Service")
@@ -197,5 +223,3 @@ class Hospice_Service(models.Model):
     class Meta:
         verbose_name = "Hospice Service"
         verbose_name_plural = "Hospice"
-
-
