@@ -11,7 +11,9 @@
       </div>
       <div class="introduction--image">
         <div><p>{{ service.blog|safe }}</p></div>
+        {% if service_image %}
         <img src="{{ service.service_image.url }}" alt="" />
+        {% endif %}
       </div>
     </div>
   </div>

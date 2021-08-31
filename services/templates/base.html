@@ -53,11 +53,11 @@
               <div class="dropdown-content">
                 <a href="{% url 'nursing_service' %}">Skilled Nurse (SN)</a>
                 <a href="{% url 'home_care' %}">Home Care Nursing (HCN)</a>
-                <a href="home-health-aide.html">Home Health Aide</a>
-                <a href="personal-care-assistance.html"
+                <a href="{% url 'health_aide' %}">Home Health Aide</a>
+                <a href="{% url 'personal_assistant' %}"
                   >Personal Care Assistance (PCA)</a
                 >
-                <a href="homemaking-services.html">Homemaking Services</a>
+                <a href="{% url 'home_making' %}">Homemaking Services</a>
                 <a href="therapy.html">Therapy</a>
                 <a href="IV-therap.html">IV Therapy</a>
                 <a href="interpretive-services.html">Interpretive Services</a>
