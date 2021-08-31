@@ -1,6 +1,6 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import Nursing_Service, Care_Service, Aid_Service, Homemaking_Service,Assistant_Service
+from .models import *
 # Create your views here.
 
 
@@ -22,10 +22,52 @@ def health_aide(request):
     health_aid = Aid_Service.objects.all()
     return render(request, 'home-health-aide.html', {'service': health_aid})
 
+
 def personal_assistant(request):
     assistant = Assistant_Service.objects.all()
     return render(request, 'personal-care-assistant.html', {'service': assistant})
 
+
 def home_making(request):
     homemaking = Homemaking_Service.objects.all()
     return render(request, 'homemaking-services.html', {'service': home_making})
+
+
+def therapy(request):
+    thrpy = Therapy_Service.objects.all()
+    return render(request, 'therapy.html', {'service': thrpy})
+
+
+def iv_therapy(request):
+    iv = IV_Therapy_Service.objects.all()
+    return render(request, 'IV-therapy.html', {'service': iv})
+
+
+def interpretive(request):
+    inter = Interpretive_Service.objects.all()
+    return render(request, 'interpretive-services.html', {'service': inter})
+
+
+def independent_living(request):
+    indp_living = Living_Skills_Service.objects.all()
+    return render(request, 'independent-living-skills.html', {'service': indp_living})
+
+
+def companion(request):
+    cmp = Companion_Service.objects.all()
+    return render(request, 'companion.html', {'service': cmp})
+
+
+def respite(request):
+    resp = Respite_Service.objects.all()
+    return render(request, 'respite.html', {'service': resp})
+
+
+def social_service(request):
+    social = Social_Service.objects.all()
+    return render(request, 'social-service.html', {'service': social})
+
+
+def hospice(request):
+    hspic = Hospice_Service.objects.all()
+    return render(request, 'hospice.html', {'service': hspic})

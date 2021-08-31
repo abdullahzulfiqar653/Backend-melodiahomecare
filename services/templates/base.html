@@ -58,16 +58,16 @@
                   >Personal Care Assistance (PCA)</a
                 >
                 <a href="{% url 'home_making' %}">Homemaking Services</a>
-                <a href="therapy.html">Therapy</a>
-                <a href="IV-therap.html">IV Therapy</a>
-                <a href="interpretive-services.html">Interpretive Services</a>
-                <a href="independent-living-skills.html"
+                <a href="{% url 'therapy' %}">Therapy</a>
+                <a href="{% url 'iv_therapy' %}">IV Therapy</a>
+                <a href="{% url 'interpretive'%}">Interpretive Services</a>
+                <a href="{% url 'independent_living' %}"
                   >Independent Living Skills (ILS)</a
                 >
-                <a href="companion.html">Companion</a>
-                <a href="respite.html">Respite</a>
-                <a href="social-services.html">Social Services</a>
-                <a href="hospice.html">Hospice</a>
+                <a href="{% url 'companion' %}">Companion</a>
+                <a href="{% url 'respite' %}">Respite</a>
+                <a href="{% url 'social_service' %}">Social Services</a>
+                <a href="{% url 'hospice' %}">Hospice</a>
               </div>
             </div>
           </li>

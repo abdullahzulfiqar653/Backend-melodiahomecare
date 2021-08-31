@@ -501,6 +501,11 @@ hr {
   margin-top: 2px;
   margin-bottom: 0px;
 }
+.introduction .introduction--image img {
+  margin-top: 25px;
+  width: 20%;
+  height: 30%;
+}
 .introduction .introduction--heading {
   border-left: 4px solid var(--primary-color);
 }

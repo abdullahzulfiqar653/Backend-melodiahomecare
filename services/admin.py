@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from .models import Hospice_Service, Care_Service, Respite_Service, Therapy_Service, Companion_Service, IV_Therapy_Service, Nursing_Service, Social_Service, Aid_Service, Homemaking_Service, Interpretive_Service, Assistant_Service, Living_Skills_Service
+from .models import *
 # Register your models here.
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import Group
