@@ -11,3 +11,6 @@ class Disable_Admin(admin.ModelAdmin):
 
 
 admin.site.register(Employee_Benefits, Disable_Admin)
+
+admin.site.register(Job_Opening)
+admin.site.register(Areas,Disable_Admin)
