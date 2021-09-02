@@ -25,7 +25,7 @@ def health_aide(request):
 
 def personal_assistant(request):
     assistant = Assistant_Service.objects.all()
-    return render(request, 'personal-care-assistant.html', {'service': assistant})
+    return render(request, 'personal-care-assistance.html', {'service': assistant})
 
 
 def home_making(request):
