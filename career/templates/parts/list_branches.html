@@ -1,12 +1,11 @@
-{% load i18n %}
-{% if branch.image %}
+{% load i18n %} {% if branches.team_image %}
 <img
   class="card-img-top"
-  src="{{ branch.image.url }}"
+  src="{{ branches.team_image.url }}"
   alt="Card image cap"
   style="max-width: 100%; max-height: inherit"
 />
 {% endif %}
 <div class="card-body">
-  <h5 class="card-title">{{ branch.name }}</h5>
+  <h5 class="card-title">{{ branches.branch_name }}</h5>
 </div>

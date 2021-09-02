@@ -5,6 +5,7 @@ from .models import *
 
 
 def branch(request, slug):
-    branchs = Branch.objects.filter(slug=slug).first()
+    branches = Branch.objects.filter(slug=slug)
+    branches = branches.first()
     # branchs = get_object_or_404(Branch, slug=slug)
-    return render(request, 'branches.html', {'branches': branchs})
+    return render(request, 'branches.html', {'branches': branches})
