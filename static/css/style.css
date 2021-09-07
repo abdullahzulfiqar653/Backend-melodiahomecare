@@ -922,6 +922,21 @@ hr {
   transform: translate(-50%, -50%) scale(2);
   transition: all 300ms ease-in-out;
 }
+@media screen and (max-width: 450px) {
+  .popup .overlay {
+    width: 100%;
+    height: 100vh;
+  }
+  .popup .content {
+    width: 150px;
+    height: 300px;
+    margin-top: 300px;
+  }
+  .popup .close-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 /* Apply Now */
 
