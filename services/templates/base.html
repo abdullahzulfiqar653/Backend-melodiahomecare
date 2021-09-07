@@ -97,7 +97,10 @@
           </li>
 
           <li class="nav__item btn-nav">
-            <a href="{% url 'apply_now' %}" class="btn" style="padding: 10px; margin-top: 10px"
+            <a
+              href="{% url 'apply_now' %}"
+              class="btn"
+              style="padding: 10px; margin-top: 10px"
               >Apply Now</a
             >
           </li>
@@ -116,10 +119,26 @@
           </header>
           <div class="collapsable__content">
             <ul class="list footer__list">
-              <li><a href="">Home</a></li>
-              <li><a href="">Payment</a></li>
-              <li><a href="">About</a></li>
-              <li class="subheading"><a href="">About</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+              <li><a href="{% url 'team' %}">About</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsable footer__section">
+          <header class="collapsable__header">
+            <h2 class="collapsable__heading footer__heading">
+              What is our Benefits?
+            </h2>
+            <svg class="icon icon--white collapsable__chevron">
+              <use xlink:href="{% static 'images/sprite.svg' %}#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsable__content">
+            <ul class="list footer__list">
+              <li><a href="{% url 'payment' %}">Payments</a></li>
+              <li><a href="{% url 'benefits' %}">Employee Benefits</a></li>
+              <li><a href="{% url 'job_opening' %}">Job Opening</a></li>
             </ul>
           </div>
         </section>
@@ -134,9 +153,11 @@
           </header>
           <div class="collapsable__content">
             <ul class="list footer__list">
-              <li><a href="">Item 1</a></li>
-              <li><a href="">Item 2</a></li>
-              <li><a href="">Item 3</a></li>
+              <li><a href="{% url 'areas' %}">Areas & Services</a></li>
+              <li>
+                <a href="{% url 'what_is_hospice' %}">What is Hospice?</a>
+              </li>
+              <li><a href="{% url 'question' %}">FAQ</a></li>
             </ul>
           </div>
         </section>
