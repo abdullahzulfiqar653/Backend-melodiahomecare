@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block title %}What is Hospice?{% endblock %} {% block home %}
+<section class="block-2 container">
+    <div class="container">
+        {% for hospice in hospice %}
+      <article class="grid feature" style="background: var(--accent-color);">
+        <div class="feature__content" data-aos="fade-right">
+          <div class="flex">
+            <div>
+              <h3 class="feature__heading">{{ hospice.question }}</h3>
+              <p>
+                {{ hospice.description|safe }}
+              </p>
+            </div>
+            <img
+              class="feature__image"
+              src="{{ hospice.image.url }}"
+              alt=""
+            />
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endblock %}

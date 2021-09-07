@@ -1,0 +1,15 @@
+<style>
+  .ancor {
+    color: #05386b;
+    text-decoration: none;
+    transition: text-decoration 0.4s;
+  }
+  .ancor {
+    text-decoration: underline;
+  }
+</style>
+{% for branch in menu_branches %}
+<a class="ancor" href="{% url 'branch' branch.slug %}"
+  >{{ branch.branch_name }}</a
+>
+{% endfor %}

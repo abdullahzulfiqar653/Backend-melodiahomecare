@@ -21,5 +21,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 urlpatterns = [
-    path('<slug:slug>/', views.branch, name="branch")
+    path('<slug:slug>/', views.branch, name="branch"),
+    path('employee-benefits', views.benefits, name="benefits"),
+    path('job-opening', views.job_opening, name="job_opening"),
+    path('services-and-areas', views.areas, name="areas"),
+    path('about', views.team, name="team"),
+    path('apply-now', views.apply_now, name="apply_now"),
 ]

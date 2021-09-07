@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- jQuery -->
     <link rel="stylesheet" href="{% static 'js/jquery.flipster.min.css' %}" />
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
@@ -37,18 +37,18 @@
           <li class="nav__item collapsible--drop">
             <div class="dropdown">
               <div class="dropbtn">
-                <a href="#">About <i class="fa fa-caret-down"></i></a>
+                <a>About <i class="fa fa-caret-down"></i></a>
               </div>
               <div class="dropdown-content">
-                <a href="#">Services & Areas</a>
-                <a href="#">Testimonials</a>
+                <a href="{% url 'areas' %}">Services & Areas</a>
+                <a href="{% url 'team' %}">Team</a>
               </div>
             </div>
           </li>
           <li class="nav__item collapsible--drop">
             <div class="dropdown">
               <div class="dropbtn">
-                <a href="#">Services <i class="fa fa-caret-down"></i></a>
+                <a>Services <i class="fa fa-caret-down"></i></a>
               </div>
               <div class="dropdown-content">
                 <a href="{% url 'nursing_service' %}">Skilled Nurse (SN)</a>
@@ -71,33 +71,33 @@
               </div>
             </div>
           </li>
-          <li class="nav__item"><a href="#">Payment</a></li>
+          <li class="nav__item"><a href="{% url 'payment' %}">Payment</a></li>
           <li class="nav__item collapsible--drop">
             <div class="dropdown">
               <div class="dropbtn">
-                <a href="#">Career <i class="fa fa-caret-down"></i></a>
+                <a>Career <i class="fa fa-caret-down"></i></a>
               </div>
               <div class="dropdown-content">
-                <a href="#">Employee Benefits</a>
-                <a href="#">Opening</a>
+                <a href="{% url 'benefits' %}">Employee Benefits</a>
+                <a href="{% url 'job_opening' %}">Opening</a>
               </div>
             </div>
           </li>
-          <li class="nav__item"><a href="#">Contact</a></li>
+          <li class="nav__item"><a href="{% url 'contact' %}">Contact</a></li>
           <li class="nav__item collapsible--drop">
             <div class="dropdown">
               <div class="dropbtn">
-                <a href="#">Hospice <i class="fa fa-caret-down"></i></a>
+                <a>Hospice <i class="fa fa-caret-down"></i></a>
               </div>
               <div class="dropdown-content">
-                <a href="#">What is Hospice?</a>
-                <a href="#">FAQ</a>
+                <a href="{% url 'what_is_hospice' %}">What is Hospice?</a>
+                <a href="{% url 'question' %}">FAQ</a>
               </div>
             </div>
           </li>
 
           <li class="nav__item btn-nav">
-            <a href="#" class="btn" style="padding: 10px; margin-top: 10px"
+            <a href="{% url 'apply_now' %}" class="btn" style="padding: 10px; margin-top: 10px"
               >Apply Now</a
             >
           </li>
@@ -161,5 +161,6 @@
       </div>
     </footer>
     <script src="{% static 'js/func.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

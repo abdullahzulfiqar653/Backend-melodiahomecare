@@ -71,3 +71,8 @@ def social_service(request):
 def hospice(request):
     hspic = Hospice_Service.objects.all()
     return render(request, 'hospice.html', {'service': hspic})
+
+
+def payment(request):
+    pay = Payment.objects.all()
+    return render(request, 'payments.html', {'payment': pay})

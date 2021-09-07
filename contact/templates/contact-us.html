@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% load widget_tweaks %}  {% block title %}Contact Us{% endblock %} {% block home %}
+
+<section class="introduction--section">
+  <div class="introduction">
+    <div class="container">
+      <div class="introduction--heading">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="introduction--image">
+        <div>
+          <h4>Why Us</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
+            veniam, quas aspernatur quos incidunt ducimus necessitatibus, ad
+            perferendis, nam voluptas sint cupiditate omnis odio voluptatibus
+            consectetur labore pariatur autem magni.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-us">
+  <div class="container">
+      <h1 style="font-size: 1.2rem; color: var(--highlight-color); text-align: center; padding-top: 20px; margin-bottom: 0;">Contact Us</h1>
+    <div class="contact-us-form">
+      <form method="POST" class="contact-form">
+        {% csrf_token %}
+        <label>First Name</label>
+        {% render_field form.first_name class="input" placeholder="Enter First Name" %}
+        <label>Last Name</label>
+        {% render_field form.last_name class="input" placeholder="Enter Last Name" %}
+        <label>Address</label>
+        {% render_field form.address class="input" placeholder="Enter Address" %}
+        <label>City</label>
+        {% render_field form.city class="input" placeholder="Enter City" %}
+        <label>State</label>
+        {% render_field form.state class="input" placeholder="Enter State" %}
+        <label>Zip</label>
+        {% render_field form.zip_code class="input" placeholder="Enter Zip" %}
+        <label>Email</label>
+        {% render_field form.email class="input" placeholder="Enter Email" %}
+        <label>Phone Number</label>
+        {% render_field form.phone class="input" placeholder="Enter Phone Number" %}
+        <label>Questions/Comments</label>
+        {% render_field form.questions class="input" style="padding-top: 20px;" %}
+        <input type="submit" class="submit" style="padding-top: 10px;padding-bottom: 10px; border: 0;"/>
+      </form>
+      <div class="how-to-contact">
+        <h4>Why to contact us?</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum
+          error numquam reprehenderit quasi, quidem aliquam non vel, incidunt
+          expedita, consequuntur illo ullam ipsa excepturi aspernatur magni ea
+          natus debitis.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

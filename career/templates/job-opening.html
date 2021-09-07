@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}Job Opening{% endblock %} {% block home %}
+<section class="introduction--section">
+    <div class="introduction">
+      <div class="container">
+        <div class="introduction--heading">
+          <h1>Job Opening</h1>
+          </p>
+        </div>
+        <div class="introduction--image" style="flex-direction: column;">
+              To apply for a position: Please complete the entire application 
+              <ul>
+                  <li class="li">Complete an <a href="" class="btn in-btn">Online Application</a></li>
+                  <li class="li">Or <a href="" class="btn in-btn">Download Application</a> bring to the Branch Office you are applying at</li>
+              </ul>         
+              <div class="grid grid-x3">
+                  {% for job in jobs%}
+                  <div class="card">
+                      <h4>{{ job.job_title }}</h3>
+                        <div>
+                            {{ job.job_description }}
+                        </div>
+                  </div>
+                  {% endfor %}
+              </div>       
+      </div>
+  </div>
+    </div>
+  </section>
+
+{% endblock %}

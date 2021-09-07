@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'hospice',
     'ckeditor',
     'contact',
+    'widget_tweaks',
     'ckeditor_uploader',
 ]
 

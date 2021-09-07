@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block title %}Employee Benefits{% endblock %} {% block home %}
+<section class="introduction--section">
+    <div class="introduction">
+      <div class="container">
+        <div class="introduction--heading">
+          <h1>Employee Benefits</h1>
+        </div>
+        <div class="introduction--image">
+          <div>
+              {% for benefits in benefits %}
+            <h4>{{ benefits.heading }}</h4>
+            <div>
+                {{ benefits.benefits }}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

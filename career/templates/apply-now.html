@@ -1,0 +1,190 @@
+{% extends 'base.html' %} {% load widget_tweaks %}{% block title %}Apply Now{% endblock %} {% block home %}
+
+<section class="apply_now">
+    <div class="container container-form">
+      <header>Apply Now</header>
+      <div class="progress-bar">
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="page slide-page">
+            <div class="title">How to Apply</div>
+            <div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Iusto cumque modi, quia neque fugit excepturi provident
+                  repellat facere aut porro voluptatibus necessitatibus
+                  deserunt. Repellat ut aspernatur minus fugit ad porro enim
+                  explicabo, ex ratione officia maiores expedita ullam nostrum
+                  nulla quisquam odit culpa sapiente soluta debitis quae eum.
+                  Eaque, quisquam!
+                </p>
+              </div>
+            </div>
+            <div class="field btns">
+              <button class="firstNext next" id="first-next">Next</button>
+            </div>
+          </div>
+          <div class="page" id="page-2">
+            <div class="title">Basic Information:</div>
+            <div class="field">
+              <div class="label">Date of Application:</div>
+              {% render_field form.application_date class="input" type="date" %}
+            </div>
+            <div class="field">
+              <div class="label">Position(s) Applied For:</div>
+              {% render_field form.position class="input"  %}
+            </div>
+            <div class="field">
+              <div class="label">
+                Which Office Location are you applying for?
+            </div>
+            {% render_field form.location class="input"  %}
+          </div>
+            <div class="field">
+              <div class="label">How did you hear about us?</div>
+              {% render_field form.about class="input"  %}
+            </div>
+            <div class="field">
+              <div class="label">
+                If reffered by other employ please enter the name below.
+              </div>
+              {% render_field form.reffer class="input"  %}
+            </div>
+            <div class="sub_title">General Questions:</div>
+            <div class="field">
+              <div class="label">
+                If you are under 18 can you provide proof of your eligibility
+                of work?
+              </div>
+              {% render_field form.under_18 class="input"  %}
+            </div>
+            <div class="field">
+              <div class="label">Hove you worked for our company?</div>
+              {% render_field form.other_company_work class="input"  %}
+            </div>
+            <div class="field">
+              <div class="label">Are you currently Employed?</div>
+              {% render_field form.employeed class="input"  %}
+            </div>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+          <div class="page" id="page-3">
+            <div class="title">Personal Information:</div>
+            <div class="tab--1x2">
+              <div class="field col-40">
+                <div class="label">First Name</div>
+                {% render_field form.first_name class="input"  %}
+              </div>
+              <div class="field col-40">
+                <div class="label">First Name</div>
+                {% render_field form.last_name class="input"  %}
+              </div>
+            </div>
+            <div class="sub_title">Address</div>
+            <div class="tab--1x2">
+              <div class="field col-40">
+                <div class="label">Address:</div>
+                {% render_field form.address1 class="input"  %}
+              </div>
+              <div class="field col-40">
+                <div class="label">Other Address(Optional):</div>
+                {% render_field form.address2 class="input"  %}
+              </div>
+            </div>
+            <div class="tab--1x2">
+              <div class="field col-40">
+                <div class="label">City:</div>
+                {% render_field form.city class="input"  %}
+              </div>
+              <div class="field col-40">
+                <div class="label">State:</div>
+                {% render_field form.state class="input"  %}
+              </div>
+            </div>
+            <div class="tab--1x2">
+              <div class="field col-40">
+                <div class="label">Zip Code:</div>
+                {% render_field form.zip_code class="input"  %}
+              </div>
+            </div>
+            <div class="sub_title">Contact Information:</div>
+            <div class="tab--1x2">
+              <div class="field col-40">
+                <div class="label">Phone</div>
+                {% render_field form.phone class="input"  %}
+              </div>
+              <div class="field col-40">
+                <div class="label">Email</div>
+                {% render_field form.email class="input"  %}
+              </div>
+            </div>
+            <div class="field">
+              <div class="label">
+                On what date could you be avilable for work?
+              </div>
+              {% render_field form.available class="input" type="date" %}
+            </div>
+            <div class="field">
+              <div class="label">Can you travel if your job requires it?</div>
+              {% render_field form.travel class="input"  %}
+            </div>
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+          <div class="page" id="page-4">
+            <div class="title">Submit the CV and Digital Signature:</div>
+            <div class="field">
+              <div class="label">Upload Your CV:</div>
+              {% render_field form.cv class="input" %}
+            </div>
+            <div class="field">
+              <div class="label">Upload your digital signature:</div>
+              {% render_field form.signature class="input" %}
+            </div>
+            <div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

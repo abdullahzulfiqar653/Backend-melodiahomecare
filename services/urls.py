@@ -20,4 +20,5 @@ urlpatterns = [
     path('repite', views.respite, name='respite'),
     path('social-service', views.social_service, name='social_service'),
     path('hospice', views.hospice, name='hospice'),
+    path('payment', views.payment, name='payment'),
 ]

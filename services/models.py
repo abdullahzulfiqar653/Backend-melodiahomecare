@@ -228,7 +228,6 @@ class Hospice_Service(models.Model):
 class Payment(models.Model):
     heading = models.CharField(
         max_length=500, blank=False, null=False, verbose_name="Heading")
-    image = models.ImageField(upload_to="Payment/", null=True, blank=True)
     description = RichTextField(verbose_name="Description")
 
     def __str__(self):

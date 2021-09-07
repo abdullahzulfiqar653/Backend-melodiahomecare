@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %}Payments{% endblock %} {% block home %}
+<section class="introduction--section">
+  <div class="introduction">
+    <div class="container">
+      <div class="introduction--heading">
+        <h1>Payments</h1>
+      </div>
+      <div
+        class="introduction--image"
+        style="display: flex; flex-direction: column"
+      >
+        {% for payment in payment %}
+        <div>
+          <h4>{{ payment.heading }}</h4>
+          <p style="width: 1000px;">{{ payment.description|safe }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

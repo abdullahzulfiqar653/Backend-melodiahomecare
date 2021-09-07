@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %} {% block title %}Team{% endblock %} {% block home %}
+<section class="about-section">
+    <div class="container">
+      <div class="grid grid--x3 about-grid">
+          {% for team in team %}
+        <div>
+          <div class="about-card">
+            <img
+              class="card-image"
+              src="{{ team.image.url }}"
+              alt="Avatar"
+              style="width: 100%"
+            />
+            <div class="card-container">
+              <h4><b>{{ team.name }}</b></h4>
+              <p>{{ team.designation }}</p>
+              <button class="card-btn" onclick="popup('{{ team.id }}')">More</button>
+            </div>
+          </div>
+          <div class="popup" id="{{ team.id }}">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="popup('{{ team.id }}')">&times;</div>
+              <h6>Name: {{ team.name }}</h6>
+              <p>
+               Designation: {{ team.designation }}
+              </p>
+              <p>Working in row: {{ team.working_on }}</p>
+              <p>Working in branch: <a href="{% url 'branch' team.branch.slug %}">{{ team.branch.branch_name }}</a></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}

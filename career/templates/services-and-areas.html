@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Services & Areas{% endblock %} {% block home %}
+<section class="introduction--section">
+    <div class="introduction">
+      <div class="container">
+        <div class="introduction--heading">
+          <h1>Services</h1>
+        </div>
+        <div class="introduction--image">
+          <div>
+            {% for area in area %}
+                {{ area.areas }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="introduction--section">
+    <div class="introduction">
+      <div class="container">
+        <div class="introduction--heading">
+          <h1>Branches</h1>
+        </div>
+        <div class="introduction--image" style="flex-direction: column;">
+            <p class="khat"></p>
+            <ul style="align-self: flex-start;">
+          {% for branch in branch %}
+          <li style="list-style: none;"><a class="ancor" href="{% url 'branch' branch.slug %}" >{{ branch.branch_name }}</a></li>
+          {% endfor %}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

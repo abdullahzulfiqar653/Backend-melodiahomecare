@@ -1,11 +1,28 @@
-{% load i18n %} {% if branches.team_image %}
-<img
-  class="card-img-top"
-  src="{{ branches.team_image.url }}"
-  alt="Card image cap"
-  style="max-width: 100%; max-height: inherit"
-/>
-{% endif %}
-<div class="card-body">
-  <h5 class="card-title">{{ branches.branch_name }}</h5>
-</div>
+
+{% extends 'base.html' %} {% block title %}{{ branches.branch_name }}{% endblock %} {% block home %}
+{% load i18n %} 
+<section class="introduction--section">
+  <div class="introduction">
+    <div class="container">
+      <div class="introduction--heading">
+        <h1>{{ branches.branch_name }}</h1>
+      </div>
+      <div class="introduction--image" style="flex-direction: column;">
+        <div style="display: flex;">
+          <div style="padding: 20px;">
+            <h4 style="font-size: 1.2rem;">Phone Number : {{ branches.phone }}</h4>
+            <h4 style="font-size: 1.2rem;">Fax Number : {{ branches.phone }}</h4>
+            <h4 style="font-size: 1.2rem;">Email : {{ branches.phone }}</h4>
+          </div>
+          <div>{{ branches.branch_address|safe }}</div>
+        </div>
+        {% if branches.team_image %}
+        <img src="{{ branches.team_image.url }}"
+          style="max-width: 100%; max-height: inherit"
+        />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

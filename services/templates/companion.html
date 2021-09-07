@@ -1,6 +1,5 @@
-{% extends 'base.html' %} {% block title %}Skilled Nurse{% endblock %} 
-{% block home %}
-{% for service in service %}
+{% extends 'base.html' %} {% block title %}Companion Service{% endblock %} 
+{% block home %} {% for service in service %}
 <section class="introduction--section">
   <div class="introduction">
     <div class="container">
@@ -13,7 +12,7 @@
         {% endif %}
       </div>
       <div class="introduction--image">
-        <div><p>{{ service.blog|safe }}</p></div>
+        <p>{{ service.blog|safe }}</p>
         {% if service_image %}
         <img src="{{ service.service_image.url }}" alt="" />
         {% endif %}

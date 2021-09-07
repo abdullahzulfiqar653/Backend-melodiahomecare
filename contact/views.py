@@ -32,4 +32,4 @@ def contact(request):
             return redirect("/")
 
     form = ContactForm()
-    return render(request, "contact.html", {'form': form})
+    return render(request, "contact-us.html", {'form': form})
